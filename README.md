@@ -13,5 +13,8 @@ Note: to obtain good results, one should leave a small space between the single 
 
 
 
- This small script allows you to reduce the number of pieces
-by utilizing small color gradients. To be precise, the script tries to identify 4 different
+<div>
+  <img style="vertical-align:middle" src="Images/example_scan.jpg">
+  <span style=""> A .jpg file (or any other file type supported by Pillow) that contains a scan of blue puzzle pieces.
+    Note: to obtain good results, one should leave a small space between the single parts.</span>
+</div>
