@@ -27,8 +27,8 @@ PIECE  | Puzzle pieces are fully recolored by a majority voting process, i.e. th
 
 ### Example Images:
 <img align="left" width="30%" src="Images/example_scan.jpg">
-<img align="left" width="30%" src="Images/example_pixel.jpg">
-<img align="left" width="30%" src="Images/example_piece.jpg">
+<img align="left" width="30%" src="Images/example_pixel.png">
+<img align="left" width="30%" src="Images/example_piece.png">
 
 ### Note:
 * This script comes without any warranty
