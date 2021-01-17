@@ -1,34 +1,3 @@
-<style media="all">
-.container
-{
-margin:0 auto;
-padding:0;
-width:100%;
-overflow: hidden;
-}
-
-.left {float: left;}
-
-.right {float: right;}
-
-.left, .right
-{
-width:49%;
-border:3px solid #00CD00;
-padding:0;
-font-family:Arial, Times, serif;
-}
-
-.contentleft h1, .contentright h1
-{
-margin:0;
-padding:0;
-display:block;
-padding: 5px 0;
-}
-
-</style>
-
 # PuzzleSkyPieces
 
 
@@ -38,20 +7,29 @@ Puzzles with large areas of sky can be demanding. This small script is intended 
 ### Requirements:
 * [Pillow-8.1.0](https://pypi.org/project/Pillow/) Required for image processing
 
-<div>
-  <img style="vertical-align:middle" src="Images/example_scan.jpg" width="200px">
-  <span style=""> </span>
-</div>
+### Input:
+A .jpg file (or any other file type supported by Pillow) that contains a scan of blue puzzle pieces.
+Each piece should have some margin to its neighbors to obtain better results.
 
-<div class="container">
-    <div class="left">
-        <img style="vertical-align:middle" src="Images/example_scan.jpg" width="200px">
-    </div>
+### Output:
+A .png file (or any other file type supported by Pillow) that contains recolored puzzle pieces. Colors are
+assigned such that red represents the 25% of the darkest pixels/pieces. Ne next 25% are interpret as green.
+Light pixels/pieces are indicated blue, whereby the lightest 25% are shown white. Note that those thresholds
+can be adjusted in the code.
 
-    <div class="right">
-        ### Input:
-        A .jpg file (or any other file type supported by Pillow) that contains a scan of blue puzzle pieces.
-        
-        Note: to obtain good results, one should leave a small space between the single parts.
-    </div>
-</div>
+### Execution modes:
+There exist two different execution modes:  
+
+Mode   | Description
+-------|------------
+PIXEL  | Consider each pixel widely independent, i.e. the upper mentioned threshold are applied to single pixels.
+PIECE  | Puzzle pieces are fully recolored by a majority voting process, i.e. the upper threshold are applied on full pieces
+
+### Example Images:
+<img align="left" width="30%" src="Images/example_scan.jpg">
+<img align="left" width="30%" src="Images/example_pixel.jpg">
+<img align="left" width="30%" src="Images/example_piece.jpg">
+
+### Note:
+* This script comes without any warranty
+* Have fun with it
