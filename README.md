@@ -32,4 +32,5 @@ PIECE  | Puzzle pieces are fully recolored by a majority voting process, i.e. th
 
 ### Note:
 * This script comes without any warranty
+* Parameters, filename, etc. must be updated within the code, there is no input argument processing implemented
 * Have fun with it
